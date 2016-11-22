@@ -28,5 +28,7 @@ repos:
 	cd $(FOLDER);git clone git@github.com:SHC-Robotics-Team-8255/example-vex.git
 	cd $(FOLDER);git clone git@github.com:SHC-Robotics-Team-8255/convex-vexilla.git
 	cd $(FOLDER);git clone git@github.com:SHC-Robotics-Team-8255/ChibiOS.git
+	cd $(FOLDER);git clone git@github.com:SHC-Robotics-Team-8255/stm32flashCortex.git
+
 
 
