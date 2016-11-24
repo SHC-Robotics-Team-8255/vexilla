@@ -9,7 +9,7 @@ If you have not made a source code folder yet, do this:
     mkdir vex
     cd vex
     
-Then you need to install things:
+You need to install things:
 
      make tools
      make repos

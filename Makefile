@@ -20,7 +20,7 @@ $(GCC):
 	cd downloads;wget $(DOWN)
 
 
-tools: prepare $(GCC)
+tools: 
 	-$(TOOLS)
 	-(cd $(FOLDER);tar xjvf $(GCC))
 
