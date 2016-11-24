@@ -37,21 +37,21 @@ In the repo directory make a new directory for your code and then copy the examp
 
 You would then edit the Makefile and make two important changes.  Change the name of your project from the default of "output" to a new name.  Change this:
 
-'''
+```
 # Define project name here
 ifeq ($(PROJECT),)
 PROJECT  = output
 endif
-'''
+```
 
 to instead be:
 
-'''
+```
 # Define project name here
 ifeq ($(PROJECT),)
 PROJECT  = testvex
 endif
-'''
+```
 
 using the name of your directory as the name instead of output.  This will embed that name into the program allowing you to see it on the robot using the shell (described later).
 
@@ -70,15 +70,15 @@ You will see something like this:
 
 The name of the serial port is the /dev/tty.usbmodem14161 part.  Now go edit the Makefile to make that be the defined serial port.  Change this:
 
-'''
+```
 SERIAL_PORT = /dev/ttyACM0
-'''
+```
 
 into the port you detected:
 
-'''
+```
 SERIAL_PORT = /dev/tty.usbmodem14161
-'''
+```
 
 Test that it works by connecting your terminal to the robot:
 
@@ -90,7 +90,7 @@ You may see some garbage letters or nothing for a moment.  Hit the "Enter" key a
 
 You can see what commands are available by typing 'help' but the command you want to use to inspect the robot is 'info' which will give you a lot of good data:
 
-'''
+```
 ch>
 ch>
 ch> info
@@ -105,7 +105,7 @@ ConVEX:       1.0.4
 Build time:   Nov 24 2016 - 20:23:19
 Project:      testvex
 Git Hash:     4fe44de756b66c709344878c0adac0b1cec89600
-'''
+```
 
 The parts that will be the most useful are the Build time (when the program was compiled), the Project (the name you gave it in the Makefile) and the Git hash.
 
@@ -115,14 +115,14 @@ The git hash is very valuable since it can be used to verify that the program ru
 
 You will see something like this:
 
-'''
+```
 commit 4fe44de756b66c709344878c0adac0b1cec89600
 Author: Greg Herlein <gherlein@herlein.com>
 Date:   Thu Nov 24 12:22:36 2016 -0800
 
     fixed git hash
 
-'''
+```
 
 You can compare the commit hash (4fe44de756b66c709344878c0adac0b1cec89600) to the hash in the info command.  If they are the same then you know what code is running.  If they are not then you either did not load that code into the robot or you forgot to do a git commit before compiling.  Either way you know you need to fix it.  You are no longer unsure what code is running on the robot.
 
@@ -131,7 +131,7 @@ You can compare the commit hash (4fe44de756b66c709344878c0adac0b1cec89600) to th
 
 If you are connected to the robot shell you can get a lot of useful data on the robot by using the apollo command:
 
-'''
+```
 │ MTR EID  CMD ENCODER  RPM  AMPS  TEMP │  DIGITAL          │  ANALOG          │
 │  1   0     0       0    0  0.00   0.0 │  1 Output       1 │  1         254   │
 │  2      ----  ------  ---  ----  ---- │  2 Output       1 │  2         256   │
@@ -155,8 +155,7 @@ If you are connected to the robot shell you can get a lot of useful data on the 
 │                                                                              │
 │ 00:24:27  Main 14.04V  Backup 0.24V                                          │
 └──────────────────────────────────────────────────────────────────────────────┘
-
-'''
+```
 
 ##Disconnecting From the Robot##
 
