@@ -20,7 +20,8 @@ $(GCC):
 	cd downloads;wget $(DOWN)
 
 
-tools: 
+tools: $(GCC)
+	-mkdir src
 	-$(TOOLS)
 	-(cd $(FOLDER);tar xjvf $(GCC))
 
