@@ -16,10 +16,10 @@ You need to install things:
 
 Tools will install the appropriare compiler for your computer and repos will install the four git repos you need to do work.  For reference they are:
 
-https://github.com/SHC-Robotics-Team-8255/ChibiOS - the real-time OS base
-https://github.com/SHC-Robotics-Team-8255/convex-vexilla - the VEX additions
-https://github.com/SHC-Robotics-Team-8255/stm32flashCortex - the flash utility
-https://github.com/SHC-Robotics-Team-8255/example-vex - example code
+- https://github.com/SHC-Robotics-Team-8255/ChibiOS - the real-time OS base
+- https://github.com/SHC-Robotics-Team-8255/convex-vexilla - the VEX additions
+- https://github.com/SHC-Robotics-Team-8255/stm32flashCortex - the flash utility
+- https://github.com/SHC-Robotics-Team-8255/example-vex - example code
 
 ##Vexilla Example Code##
 
@@ -168,6 +168,26 @@ This will disconnect from the robot.  We connect to the robot using a standard t
      man screen
 
 
+##Flashing new Code onto the Robot##
+
+Before this tooling will work to install compiled code onto the robot
+you need to compile and install the flash utility.  From this
+directory in the terminal:
+
+	  cd src/stm32flashCortex
+	  make
+	  sudo make install
+	  (enter your password for your computer when prompted)
+
+This will compile and install a utility that can install code onto the
+VEX.  This utility is called from the Makefile and no particular
+action is needed from you other than installing it.  If you are using
+a cloud server to compile vexilla programs you don't need to install
+this.
+
+	  
+
+    
 
 
 
