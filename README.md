@@ -185,6 +185,12 @@ action is needed from you other than installing it.  If you are using
 a cloud server to compile vexilla programs you don't need to install
 this.
 
+##Credits##
+
+Vexilla would not be possible without the incredible efforts of James
+Pearman who wrote convex.  Vexilla is based on a snapshot of his work.
+
+	https://github.com/jpearman/convex
 	  
 
     
