@@ -193,7 +193,41 @@ Pearman who wrote convex.  Vexilla is based on a snapshot of his work.
 	https://github.com/jpearman/convex
 	  
 
-    
+##Cloud Vexilla##
+
+If you don't have access to a computer that can run the vexilla tools
+but you want to at least compile programs then you can use a cloud
+server we have prepared (vexilla.herlein.com).  Please ask Coach
+Herlein for an account on that server.  All you have to do is ssh to
+that server and follow the instructions above and you will have a
+working coding environment of your own.
+
+However, you won't be able to install that code onto a robot unless
+you have help.  You will need someone who does have a working vexilla
+on their computer.
+
+On the cloud server, compile your VEX code just like you normally
+would.  This will make a <project>.hex file in the bin directory of
+your source directory. Then type this:
+
+     make serve
+
+A simple HTTP server will start.  From the computer attached to the
+VEX robot, in the example-vexilla folder type this:
+
+    make clean
+    make fetch
+
+This will connect to the cloud server and download the VEX code to the
+bin directory.  On the cloud server, type ctrl-c to halt the file
+server.  Then, on the computer attached to the robot, type:
+
+    make install
+
+(just like normal).  This will install the program you just downloaded
+onto the robot.
+
+
 
 
 
