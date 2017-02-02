@@ -9,6 +9,13 @@ If you have not made a source code folder yet, do this:
     mkdir vex
     cd vex
     
+Clone the vexilla repo:
+
+    git clone git@github.com:SHC-Robotics-Team-8255/vexilla.git
+
+Note that you may get an error.  You may have to install git first.
+You will need to have created an account on github.
+
 You need to install things:
 
      make tools
