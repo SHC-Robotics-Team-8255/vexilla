@@ -6,20 +6,26 @@ Tooling to help VEX Robotics team 8255 - SHC Robotics - program the VEX robot.
 
 If you have not made a source code folder yet, do this:
 
+```
     mkdir vex
     cd vex
-    
+```
+
 Clone the vexilla repo:
 
-    git clone git@github.com:SHC-Robotics-Team-8255/vexilla.git
+```
+git clone git@github.com:SHC-Robotics-Team-8255/vexilla.git
+```
 
 Note that you may get an error.  You may have to install git first.
 You will need to have created an account on github.
 
 You need to install things:
 
+```
      make tools
      make repos
+```
 
 Tools will install the appropriare compiler for your computer and repos will install the four git repos you need to do work.  For reference they are:
 
@@ -38,9 +44,11 @@ vexuser.c contains all the usercode for robotics behavior.  See the README file 
 
 In the repo directory make a new directory for your code and then copy the example into it as a starting point.  If you wanted your program to be called testvex, you would:
 
-   mkdir testvex
-   cd testvex
-   cp -Rv ../example-vex .
+```
+     mkdir testvex
+     cd testvex
+     cp -Rv ../example-vex .
+```
 
 You would then edit the Makefile and make two important changes.  Change the name of your project from the default of "output" to a new name.  Change this:
 
@@ -62,19 +70,38 @@ endif
 
 using the name of your directory as the name instead of output.  This will embed that name into the program allowing you to see it on the robot using the shell (described later).
 
-The other change you need to make is to use the right serial port.  You will need to detect what serial port device your computer assignes.  Run this command:
+The other change you need to make is to use the right serial port.
+You will need to detect what serial port device your computer
+assignes.  You can automatically detect the name of the serial port by
+doing this:
 
+```
+	make detect
+```
+This will generate an output that looks something like this:
+
+```
+    5a6
+    > crw-rw-rw-  1 root      wheel   18,  18 Nov 24 12:39 /dev/tty.usbmodem14161
+    55c56
+```
+
+Or you can do this all manually by running this set of commands:
+
+```
     ls -al /dev/tty* >a
     (plug in the USB programmer connected through the remote control to the robot)
     ls -al /dev/tty* >b
     diff a b
+```
 
 You will see something like this:
 
+```
     5a6
     > crw-rw-rw-  1 root      wheel   18,  18 Nov 24 12:39 /dev/tty.usbmodem14161
     55c56
-
+```
 The name of the serial port is the /dev/tty.usbmodem14161 part.  Now go edit the Makefile to make that be the defined serial port.  Change this:
 
 ```
