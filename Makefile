@@ -3,7 +3,7 @@ OS := $(shell uname)
 ifeq ($(OS),Darwin)
 	TOOLS=xcode-select --install
 	GCC=../downloads/gcc-arm-none-eabi-5_4-2016q3-20160926-mac.tar.bz2
-	DOWN=https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q3-update/+download/gcc-arm-none-eabi-5_4-2016q3-20160926-mac.tar.bz2
+	DOWN=https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q3-update/+download/gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2
 	TARBALL=downloads/gcc-arm-none-eabi-5_4-2016q3-20160926-mac.tar.bz2
 else
 	TOOLS=sudo apt-get install -y build-essential
