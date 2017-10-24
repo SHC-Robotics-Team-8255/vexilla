@@ -2,7 +2,7 @@
 
 Tooling to help VEX Robotics team 8255 - SHC Robotics - program the VEX robot.
 
-##Installation Instructions##
+## Installation Instructions ##
 
 If you have not made a source code folder yet, do this:
 
