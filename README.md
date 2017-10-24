@@ -1,4 +1,4 @@
-#Vexilla#
+# Vexilla #
 
 Tooling to help VEX Robotics team 8255 - SHC Robotics - program the VEX robot.
 
@@ -34,7 +34,7 @@ Tools will install the appropriare compiler for your computer and repos will ins
 - https://github.com/SHC-Robotics-Team-8255/stm32flashCortex - the flash utility
 - https://github.com/SHC-Robotics-Team-8255/example-vex - example code
 
-##Vexilla Example Code##
+## Vexilla Example Code ##
 
 There is an example program in the repos/example-vex folder.  The two files you may need to edit are the Makefile and the vexuser.c file.
 
@@ -161,7 +161,7 @@ Date:   Thu Nov 24 12:22:36 2016 -0800
 You can compare the commit hash (4fe44de756b66c709344878c0adac0b1cec89600) to the hash in the info command.  If they are the same then you know what code is running.  If they are not then you either did not load that code into the robot or you forgot to do a git commit before compiling.  Either way you know you need to fix it.  You are no longer unsure what code is running on the robot.
 
 
-##Usefull Additional Tools##
+## Usefull Additional Tools ##
 
 If you are connected to the robot shell you can get a lot of useful data on the robot by using the apollo command:
 
@@ -191,7 +191,7 @@ If you are connected to the robot shell you can get a lot of useful data on the 
 └──────────────────────────────────────────────────────────────────────────────┘
 ```
 
-##Disconnecting From the Robot##
+## Disconnecting From the Robot ##
 
 To disconnect from the robot shell you have to type ctrl-a (at the same time) and then
 
@@ -219,7 +219,7 @@ action is needed from you other than installing it.  If you are using
 a cloud server to compile vexilla programs you don't need to install
 this.
 
-##Credits##
+## Credits ##
 
 Vexilla would not be possible without the incredible efforts of James
 Pearman who wrote convex.  Vexilla is based on a snapshot of his work.
@@ -227,7 +227,7 @@ Pearman who wrote convex.  Vexilla is based on a snapshot of his work.
 	https://github.com/jpearman/convex
 	  
 
-##Cloud Vexilla##
+## Cloud Vexilla ##
 
 If you don't have access to a computer that can run the vexilla tools
 but you want to at least compile programs then you can use a cloud
