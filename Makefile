@@ -39,6 +39,7 @@ repos:
 	cd $(FOLDER);git clone git@github.com:SHC-Robotics-Team-8255/stm32flashCortex.git
 
 refresh:
+	git pull
 	cd $(FOLDER)/example-vex;git pull
 	cd $(FOLDER)/convex-vexilla;git pull
 	cd $(FOLDER)/ChibiOS;git pull
