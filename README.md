@@ -4,6 +4,16 @@ Tooling to help VEX Robotics team 8255 - SHC Robotics - program the VEX robot.
 
 ## Installation Instructions ##
 
+You need to have a program called "git" installed.  To test, try this:
+open a terminal and type:
+
+```
+    git
+```
+
+If it says "file not found" then you need to go install it.  Google
+"install git" for your operating system for instructions.
+
 If you have not made a source code folder yet, do this:
 
 ```
@@ -23,11 +33,10 @@ You will need to have created an account on github.
 You need to install things:
 
 ```
-     make tools
-     make repos
+    make
 ```
 
-Tools will install the appropriare compiler for your computer and repos will install the four git repos you need to do work.  For reference they are:
+This will install the appropriare compiler for your computer and repos will install the four git repos you need to do work.  For reference they are:
 
 - https://github.com/SHC-Robotics-Team-8255/ChibiOS - the real-time OS base
 - https://github.com/SHC-Robotics-Team-8255/convex-vexilla - the VEX additions
