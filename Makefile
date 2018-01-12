@@ -1,4 +1,4 @@
-FOLDER := bin
+FOLDER := src
 OS := $(shell uname)
 ifeq ($(OS),Darwin)
 	TOOLS=xcode-select --install
@@ -27,9 +27,9 @@ $(TARBALL):
 
 
 tools: $(TARBALL)
-	-mkdir $(FOLDER)
+	-mkdir bin
 	-$(TOOLS)
-	-(cd $(FOLDER);tar xjvf $(GCC))
+	-(cd bin;tar xjvf $(GCC))
 
 
 repos:
